@@ -2,6 +2,8 @@
 #define _Suits 4
 #define _Ranks 13
 
+// test //
+
 static int Size_of_Deck = _Suits * _Ranks;
 
 enum Card_Ranks : int {
