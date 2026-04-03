@@ -1,17 +1,38 @@
-#define _Deck 1
-#define _Suits 4
-#define _Ranks 13
+#pragma once
 
-// test //
-
-static int Size_of_Deck = _Suits * _Ranks;
-
-enum Card_Ranks : int {
-    Ace, One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack, Queen, King
+enum class Face
+{
+    Ace = 1,
+    Two,
+    Three,
+    Four,
+    Five,
+    Six,
+    Seven,
+    Eight,
+    Nine,
+    Ten,
+    Jack, 
+    Queen,
+    King
 };
 
-enum Card_Suits : int {
-    Hearts, Clubs, Diamonds, Spades
+enum class Suit
+{
+    Diamond,
+    Spade,
+    Heart, 
+    Club
 };
 
+struct Card
+{
+    Card() : m_face(Face::Ace, m_suit(Suit::Diamond) {}
+    Card(Face face, Suit suit) : m_face(face), m_suit(suit) {}
+    ~Card() {}
+    winrt::hstring ToString() const
+    {
+
+    }
+};
 
